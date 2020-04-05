@@ -20,7 +20,7 @@ figure2.add_trace(
         x=t[:-1],
         y=((h[1:] - h[:-1]) / dt),
         mode='lines+markers',
-        name='V(T) - right'
+        name='V1(T)'
     )
 )
 figure2.add_trace(
@@ -28,7 +28,7 @@ figure2.add_trace(
         x=t[1:-1],
         y=((h[2:] - h[:-2]) / (2 * dt)),
         mode='lines+markers',
-        name='V(T) - central'
+        name='V2(T)'
     )
 )
 figure2.add_trace(
@@ -36,7 +36,7 @@ figure2.add_trace(
         x=t[1:-1],
         y=((h[2:] - 2 * h[1:-1] + h[:-2]) / (dt * dt)),
         mode='lines+markers',
-        name='A(T) - central'
+        name='A2(T)'
     )
 )
 figure2.update_layout(xaxis_title='T, s', yaxis_title='V, m/s; A, m/s^2')
